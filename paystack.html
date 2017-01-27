@@ -1,0 +1,354 @@
+<iframe frameborder="0" allowtransparency="true" name="paystackh5WTm" id="paystackh5WTm" src="https://paystack.com/templates/payment/inline.html?id=paystackh5WTm&amp;key=pk_live_c007ee67578ee7b343cb84ec14576b3f71d26812&amp;ref=22754_1485470493&amp;email=kcmailz%40yahoo.com&amp;amount=590000&amp;currency=NGN&amp;metadata=%7B%22referrer%22%3A%22http%3A%2F%2Fhingees.com%2Fcheckout%2Forder-pay%2F22754%2F%3Fkey%3Dwc_order_588a7b1c21a0f%22%7D&amp;hasTLSFallback=true" class="paystack_pop" style="z-index: 9999; display: block; background: rgba(0, 0, 0, 0.00392157); border: 0px none transparent; overflow: hidden; visibility: visible; margin: 0px; padding: 0px; -webkit-tap-highlight-color: transparent; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%;">
+	
+	<html lang="en" data-ember-extension="1"><head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	    <!--320-->
+	    <title>Paystack Payment Page</title>
+	    <link href="/assets/payment/css/pay.css" rel="stylesheet">
+	    <!--[if lt IE 9]>
+	        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	        <![endif]-->
+	</head>
+
+	<body style="display: block;">
+	    <div id="paystack-container" class="paystack-container paystack-pop paystack-full">
+	        <div id="paystack-bg" class="paystack-bg animated fadeIn"></div>
+	        <div class="paystack-color-bar"></div>
+	        <div id="paystack-wrapper" class="paystack-wrapper animated zoomIn">
+	            <div id="paystack-close-btn" class="paystack-close paystack-close-btn">×</div>
+	            <div class="paystack-loader">
+	                <span class="sprite sprite-spinner-lg"></span>
+	                <span class="sprite sprite-spinner-lg-dk"></span>
+	            </div>
+	            <div class="paystack-error-div">
+	                <div class="sprite sprite-warning"></div>
+	                <span>Invalid Payment Page</span>
+	                <a class="btn btn-default paystack-close-btn">Close</a>
+	            </div>
+	            <div class="paystack-box">
+	                <div class="company-logo">
+	                    <div class="logo">
+	                        <img class="transaction-merchant-logo" src="https://pstk-integration-logos.s3-eu-west-1.amazonaws.com/44377535-9ced-4321-915c-9d000eea0d13" alt="Hingees">
+	                        <span class="transaction-merchant"></span>
+	                    </div>
+	                </div>
+	                <div class="paystack-info no-switch">
+	                    <div class="email transaction-email">kcmailz@yahoo.com</div>
+	                    <div class="amount"><span class="transaction-currency">NGN</span> <span class="transaction-amount">5,900</span> <span class="transaction-duration"></span></div>
+	                </div>
+	                <div id="paystack-switch" class="paystack-switch" style="">
+	                    <a class="paystack-switch-card active" data-mode="card">Pay with Card</a>
+	                    <a class="paystack-switch-bank" data-mode="bank">Pay with Bank</a>
+	                </div>
+	                <div id="paystack-form-holder" class="paystack-form"><form id="paystack-form" method="post" autocomplete="off" class="animated fadeInLeft">
+	                <div class="alert alert-danger error-message animated fadeInDown alt" role="alert" style="display: none;">
+	                    <span class="error-message-content"></span>
+	                    <a class="reset-errors">Close</a>
+	                </div>
+	                <div class="error-overlay hidden reset-errors"></div>
+	                <div class="card-input-view">
+	                    <div class="form-group paystack-email hidden" style="display: none">
+	                        <input type="email" id="emailaddress" class="cc-email form-control has-floating-label" placeholder="Email Address" data-paystack="email" disabled="">
+	                        <label class="floating-label" for="emailaddress">Email Address</label>
+	                    </div>
+	                    <div class="form-group card-number">
+	                        <input type="tel" id="cardnumber" class="cc-number form-control has-floating-label visa identified" placeholder="0000 0000 0000 0000" autocomplete="off" data-numeric="" data-paystack="number">
+	                        <label class="floating-label" for="cardnumber">Card Number</label>
+	                        <span id="paystack-card" class="paystack-card visa identified animated fadeInLeft"></span>
+	                    </div>
+	                    <div class="row form-two-input">
+	                        <div class="col-xs-6">
+	                            <div class="form-group card-expiry">
+	                                <input type="tel" id="expiry" class="cc-expiry form-control has-floating-label" placeholder="MM / YY" data-paystack="expiry" autocomplete="off">
+	                                <label class="floating-label" for="expiry">Valid Till</label>
+	                            </div>
+	                        </div>
+	                        <div class="col-xs-6">
+	                            <div class="form-group card-cvv">
+	                                <input type="tel" id="cvv" class="cc-cvv form-control has-floating-label" placeholder="123" data-paystack="cvv" autocomplete="off">
+	                                <label class="floating-label" for="cvv">CVV <a id="cvv-helper" class="pull-right">Help?</a></label>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <button type="button" class="btn btn-pay btn-block btn-lg" data-type="card" id="pay-btn">
+	                            <span class="btn-text">Pay <span class="transaction-currency">NGN</span> <b class="transaction-amount">5,900</b></span>
+	                            <span class="btn-loader hidden"><i class="sprite sprite-spinner"></i> Please wait</span>
+	                        </button>
+	                    </div>
+	                </div>
+	                <div class="token-input-view authorization-view animated fadeInUp" style="display: none;">
+	                    <div class="authorization-view_header">ENTER CARD PIN</div>
+	                    <div class="authorization-view_subheader">To confirm that you are the owner of this card please enter your card PIN</div>
+	                    <div class="card-pin-group">
+	                        
+	                        <div class="form-group card-pin pin-field-desktop" style="">
+	                            <div class="pincode-input-container">
+	                                <div class="pincode-input-label">Card Pin</div>
+	                                <input type="tel" maxlength="1" autocomplete="off" data-position="0" class="form-control pincode-input-text" data-numeric="">
+	                                <input type="tel" maxlength="1" autocomplete="off" data-position="1" class="form-control pincode-input-text" data-numeric="">
+	                                <input type="tel" maxlength="1" autocomplete="off" data-position="2" class="form-control pincode-input-text" data-numeric="">
+	                                <input type="tel" maxlength="1" autocomplete="off" data-position="3" class="form-control pincode-input-text" data-numeric="">
+	                                <div style="display: none">
+	                                    <input type="tel" id="pin" class="cc-pin form-control" data-paystack="pin" autocomplete="off">
+	                                </div>
+	                            </div>
+	                            <div class="pincode-loader"><span class="sprite sprite-spinner-dk"></span></div>
+	                        </div>
+	                    </div>
+	                    <div id="token-verification" class="card-token-group" style="display: none">
+	                        <div class="form-group card-token input-with-icon">
+	                            <span class="sprite sprite-lock"></span>
+	                            <input type="text" id="cardtoken" class="cc-token form-control" placeholder="123456" data-paystack="token" autocomplete="false">
+	                            <button type="button" class="btn btn-pay addon-button btn-block btn-lg" id="authorizeCard">
+	                                <span class="btn-text">Authorize</span>
+	                                <span class="btn-loader hidden"><i class="sprite sprite-spinner" style="left: 40%"></i></span>
+	                            </button>
+	                        </div>
+	                        <div class="reset-options">
+	                            <a id="resend-token">Resend Token</a>
+	                            <a id="start-over" class="pull-right">Start Over</a>
+	                        </div>
+	                    </div>
+	                    <div id="phone-enrollment" class="card-number-group" style="display: none">
+	                        <div class="row form-two-input">
+	                            <div class="col-xs-5 no-pad-right">
+	                                <div class="form-group area-code input-with-icon">
+	                                    <span class="sprite sprite-phone"></span>
+	                                    <select class="form-control cc-area-code" name="countryCode">
+	                                        <option value="234" selected="">+234</option>
+	                                    </select>
+	                                </div>
+	                            </div>
+	                            <div class="col-xs-7">
+	                                <div class="form-group phone-number">
+	                                    <input type="text" id="phonenumber" class="cc-phone-number form-control" maxlength="11" placeholder="700000000" autocomplete="false">
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="form-group">
+	                            <button type="button" class="btn btn-pay btn-block btn-lg" id="enrollNumber">
+	                                <span class="btn-text">Send OTP</span>
+	                                <span class="btn-loader hidden"><i class="sprite sprite-spinner"></i> Please wait</span>
+	                            </button>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="securecode-message authorization-view animated fadeIn" style="display: none">
+	                    <div class="pre-authorization">
+	                        <div class="authorization-view_header">AUTHORIZATON REQUIRED</div>
+	                        <div class="authorization-view_subheader">You'll be redirected to your bank for authorization.</div>
+	                        <div class="form-group">
+	                            <button type="button" class="btn btn-pay btn-block btn-lg securecode-button">Yes, Continue</button>
+	                            <a class="close-securecode cancel-authorization">Cancel</a>
+	                        </div>
+	                    </div>
+	                    <div class="during-authorization" style="display:none">
+	                        <span class="sprite sprite-spinner-lg-dk"></span>
+	                        <div>Authorizing your payment</div>
+	                    </div>
+	                </div>
+	            </form></div>
+	                <div id="paystack-ok" class="paystack-form hidden">
+	                    <div class="paystack-ok">
+	                        <img src="/assets/payment/img/success.png" alt="Payment Successful" class="animated fadeInLeft">
+	                        <div class="animated fadeIn">
+	                            <h3>Payment Successful</h3>
+	                            <h5 id="paystack-redirect" class="text-muted"></h5>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div id="paystack-requery" class="paystack-form hidden">
+	                    <div class="paystack-requery">
+	                        <span class="loader loader-bounce-middle"></span>
+	                        <div class="animated fadeIn">
+	                            <h4>Please wait</h4>
+	                            <h5>We're trying to reach your bank to verify the status of the transaction</h5>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	            
+	            <div id="paystack-footer" class="paystack-footer animated fadeIn">
+	                <i class="sprite sprite-lock inline"></i> <i class="sprite sprite-lock-white inline"></i> Secured by <b>Paystack</b>
+	                <br> <a target="_blank" href="https://paystack.com/what-is-paystack">What is Paystack?</a>
+	            </div>
+	        </div>
+	        <div id="templates" class="hidden">
+	            <form id="card-payment" method="post" autocomplete="off" class="animated">
+	                <div class="alert alert-danger error-message animated fadeInDown alt" role="alert" style="display: none;">
+	                    <span class="error-message-content"></span>
+	                    <a class="reset-errors">Close</a>
+	                </div>
+	                <div class="error-overlay hidden reset-errors"></div>
+	                <div class="card-input-view">
+	                    <div class="form-group paystack-email hidden" style="display: none">
+	                        <input type="email" id="emailaddress" class="cc-email form-control has-floating-label" placeholder="Email Address" data-paystack="email" disabled="">
+	                        <label class="floating-label" for="emailaddress">Email Address</label>
+	                    </div>
+	                    <div class="form-group card-number">
+	                        <input type="tel" id="cardnumber" class="cc-number form-control has-floating-label" placeholder="0000 0000 0000 0000" autocomplete="off" data-numeric="" data-paystack="number">
+	                        <label class="floating-label" for="cardnumber">Card Number</label>
+	                        <span id="paystack-card"></span>
+	                    </div>
+	                    <div class="row form-two-input">
+	                        <div class="col-xs-6">
+	                            <div class="form-group card-expiry">
+	                                <input type="tel" id="expiry" class="cc-expiry form-control has-floating-label" placeholder="MM / YY" data-paystack="expiry" autocomplete="off">
+	                                <label class="floating-label" for="expiry">Valid Till</label>
+	                            </div>
+	                        </div>
+	                        <div class="col-xs-6">
+	                            <div class="form-group card-cvv">
+	                                <input type="tel" id="cvv" class="cc-cvv form-control has-floating-label" placeholder="123" data-paystack="cvv" autocomplete="off">
+	                                <label class="floating-label" for="cvv">CVV <a id="cvv-helper" class="pull-right">Help?</a></label>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <button type="button" class="btn btn-pay btn-block btn-lg" data-type="card" id="pay-btn">
+	                            <span class="btn-text">Pay <span class="transaction-currency">NGN</span> <b class="transaction-amount">5,900</b></span>
+	                            <span class="btn-loader hidden"><i class="sprite sprite-spinner"></i> Please wait</span>
+	                        </button>
+	                    </div>
+	                </div>
+	                <div class="token-input-view authorization-view animated fadeInUp" style="display: none;">
+	                    <div class="authorization-view_header">ENTER CARD PIN</div>
+	                    <div class="authorization-view_subheader">To confirm that you are the owner of this card please enter your card PIN</div>
+	                    <div class="card-pin-group">
+	                        
+	                        <div class="form-group card-pin pin-field-desktop" style="">
+	                            <div class="pincode-input-container">
+	                                <div class="pincode-input-label">Card Pin</div>
+	                                <input type="tel" maxlength="1" autocomplete="off" data-position="0" class="form-control pincode-input-text" data-numeric="">
+	                                <input type="tel" maxlength="1" autocomplete="off" data-position="1" class="form-control pincode-input-text" data-numeric="">
+	                                <input type="tel" maxlength="1" autocomplete="off" data-position="2" class="form-control pincode-input-text" data-numeric="">
+	                                <input type="tel" maxlength="1" autocomplete="off" data-position="3" class="form-control pincode-input-text" data-numeric="">
+	                                <div style="display: none">
+	                                    <input type="tel" id="pin" class="cc-pin form-control" data-paystack="pin" autocomplete="off">
+	                                </div>
+	                            </div>
+	                            <div class="pincode-loader"><span class="sprite sprite-spinner-dk"></span></div>
+	                        </div>
+	                    </div>
+	                    <div id="token-verification" class="card-token-group" style="display: none">
+	                        <div class="form-group card-token input-with-icon">
+	                            <span class="sprite sprite-lock"></span>
+	                            <input type="text" id="cardtoken" class="cc-token form-control" placeholder="123456" data-paystack="token" autocomplete="false">
+	                            <button type="button" class="btn btn-pay addon-button btn-block btn-lg" id="authorizeCard">
+	                                <span class="btn-text">Authorize</span>
+	                                <span class="btn-loader hidden"><i class="sprite sprite-spinner" style="left: 40%"></i></span>
+	                            </button>
+	                        </div>
+	                        <div class="reset-options">
+	                            <a id="resend-token">Resend Token</a>
+	                            <a id="start-over" class="pull-right">Start Over</a>
+	                        </div>
+	                    </div>
+	                    <div id="phone-enrollment" class="card-number-group" style="display: none">
+	                        <div class="row form-two-input">
+	                            <div class="col-xs-5 no-pad-right">
+	                                <div class="form-group area-code input-with-icon">
+	                                    <span class="sprite sprite-phone"></span>
+	                                    <select class="form-control cc-area-code" name="countryCode">
+	                                        <option value="234" selected="">+234</option>
+	                                    </select>
+	                                </div>
+	                            </div>
+	                            <div class="col-xs-7">
+	                                <div class="form-group phone-number">
+	                                    <input type="text" id="phonenumber" class="cc-phone-number form-control" maxlength="11" placeholder="700000000" autocomplete="false">
+	                                </div>
+	                            </div>
+	                        </div>
+	                        <div class="form-group">
+	                            <button type="button" class="btn btn-pay btn-block btn-lg" id="enrollNumber">
+	                                <span class="btn-text">Send OTP</span>
+	                                <span class="btn-loader hidden"><i class="sprite sprite-spinner"></i> Please wait</span>
+	                            </button>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="securecode-message authorization-view animated fadeIn" style="display: none">
+	                    <div class="pre-authorization">
+	                        <div class="authorization-view_header">AUTHORIZATON REQUIRED</div>
+	                        <div class="authorization-view_subheader">You'll be redirected to your bank for authorization.</div>
+	                        <div class="form-group">
+	                            <button type="button" class="btn btn-pay btn-block btn-lg securecode-button">Yes, Continue</button>
+	                            <a class="close-securecode cancel-authorization">Cancel</a>
+	                        </div>
+	                    </div>
+	                    <div class="during-authorization" style="display:none">
+	                        <span class="sprite sprite-spinner-lg-dk"></span>
+	                        <div>Authorizing your payment</div>
+	                    </div>
+	                </div>
+	            </form>
+	            <form id="bank-payment" method="post" autocomplete="on" class="animated">
+	                <div class="alert alert-danger error-message animated fadeInDown alt" role="alert" style="display: none;">
+	                    <span class="error-message-content"></span>
+	                    <a class="reset-errors">Close</a>
+	                </div>
+	                <div class="error-overlay hidden reset-errors"></div>
+	                <div class="bank-list">
+	                    <div class="row">
+	                        <div class="col-xs-6">
+	                            <a class="bank-picker" data-bank="access" data-id="1"> <span class="bank-sprite access"></span> </a>
+	                        </div>
+	                        <div class="col-xs-6">
+	                            <a class="bank-picker disabled"></a>
+	                        </div>
+	                        <div class="col-xs-6">
+	                            <a class="bank-picker disabled"></a>
+	                        </div>
+	                        <div class="col-xs-6">
+	                            <a class="bank-picker disabled"></a>
+	                        </div>
+	                        <div class="col-xs-12">
+	                            <div class="bank-list-message">Other banks coming soon</div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="bank-form">
+	                    <div class="bank-form-header">
+	                        <a class="back-arrow return-to-bank-picker"><span class="sprite sprite-back-arrow"></span></a>
+	                        <div class="header-sprite animated fadeIn"></div>
+	                    </div>
+	                    <div class="bank-form-content animated fadeInUp">
+	                        <div class="form-group account-number input-with-icon">
+	                            <span class="sprite sprite-account"></span>
+	                            <input type="tel" id="accountnumber" class="cc-account form-control" placeholder="Account Number (10 digits)" data-numeric="" data-paystack="account" maxlength="10">
+	                            <input type="hidden" class="bank-form-id">
+	                        </div>
+	                        <div id="bank-token-label" class="bank-form-label show-when-authorized">
+	                            <b>Enter the SMS code</b> sent to your phone. Didn't get a message? <a class="resend-bank-token">Resend Token</a>
+	                        </div>
+	                        <div class="form-group account-token animated fadeInUp show-when-authorized input-with-icon">
+	                            <span class="sprite sprite-lock"></span>
+	                            <input type="tel" id="accounttoken" class="cc-token form-control no-radius" placeholder="Enter Token" data-numeric="" data-paystack="token">
+	                        </div>
+	                        <div class="form-group">
+	                            <button type="button" class="btn btn-pay btn-block btn-lg hide-when-authorized" id="authorizeBank">
+	                                <span class="btn-text">Proceed</span>
+	                                <span class="btn-loader hidden"><i class="sprite sprite-spinner"></i> Proceed</span>
+	                            </button>
+	                            <button type="button" class="btn btn-pay btn-block btn-lg show-when-authorized" data-type="bank" id="pay-btn">
+	                                <span class="btn-text">Pay <span class="transaction-currency">NGN</span> <b class="transaction-amount">5,900</b></span>
+	                                <span class="btn-loader hidden"><i class="sprite sprite-spinner"></i> Verifying token</span>
+	                            </button>
+	                        </div>
+	                    </div>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	    <script id="sift-beacon" src="https://cdn.siftscience.com/s.js"></script><script src="/assets/payment/js/payment-dependencies.min.js"></script>
+	    <script src="/assets/payment/js/inline-inner.min.js"></script>
+
+
+	<div class="adsbox">&nbsp;</div></body></html>
+
+</iframe>

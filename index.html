@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paystack</title>
+    <meta name="description" content="Accept payments online with Paystack">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <div class="page">
+        
+        <div class="container">
+            <div class="grid">
+                <div class="grid__column grid__column--6 grid__column--centered">
+                    <div class="page__header">
+                        <img src="images/logo_icon.svg" class="page__logo">
+                        <h1 class="page__title">Paystack</h1>
+                    </div>
+                    
+
+                    <div class="payment-card">
+                        <div class="switcher switcher--payment-card">
+                            <div class="switcher__item switcher__item--active">Pay with Card</div>
+                            <div class="switcher__divider"></div>
+                            <div class="switcher__item">Pay with Bank</div>
+                        </div>
+
+                        <form class="payment-form payment-form--card">
+                            <div class="payment-form__group">
+                                <div class="payment-form__label">Card Number</div>
+                                <input type="text" class="payment-form__field" placeholder="0000 0000 0000 0000">
+                            </div>
+
+                            <div class="payment-form__group payment-form__group--half left">
+                                <div class="payment-form__label">Valid Till</div>
+                                <input type="text" class="payment-form__field" placeholder="MM / YY">
+                            </div>
+
+                            <div class="payment-form__group payment-form__group--half payment-form__group--right">
+                                <div class="payment-form__label">CVV</div>
+                                <input type="text" class="payment-form__field" placeholder="000">
+                            </div>
+
+                            <div class="clear"></div>
+
+                            <div class="payment-form__group">
+                                <button class="payment-form__button">Pay Securely</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</body>
+</html>
