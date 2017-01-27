@@ -23,39 +23,80 @@
 
                     <div class="payment-card">
                         <div class="switcher switcher--payment-card">
-                            <div class="switcher__item switcher__item--active">Pay with Card</div>
-                            <div class="switcher__divider"></div>
-                            <div class="switcher__item">Pay with Bank</div>
-                        </div>
-
-                        <form class="payment-form payment-form--card">
-                            <div class="payment-form__group">
-                                <div class="payment-form__label">Card Number</div>
-                                <input type="text" class="payment-form__field" placeholder="0000 0000 0000 0000">
-                            </div>
-
-                            <div class="payment-form__group payment-form__group--half left">
-                                <div class="payment-form__label">Valid Till</div>
-                                <input type="text" class="payment-form__field" placeholder="MM / YY">
-                            </div>
-
-                            <div class="payment-form__group payment-form__group--half payment-form__group--right">
-                                <div class="payment-form__label">CVV</div>
-                                <input type="text" class="payment-form__field" placeholder="000">
-                            </div>
-
+                            <div class="switcher__item switcher__item--card switcher__item--active">Card Payment</div>
+                            <div class="switcher__item switcher__item--bank">Bank Payment</div>
                             <div class="clear"></div>
+                        </div>
+                        
+                        <div class="payment-form-wrap">
+                            
+                            <form class="payment-form payment-form--card">
+                                <div class="payment-form__group">
+                                    <div class="payment-form__label">Card Number</div>
+                                    <input type="text" class="payment-form__field" placeholder="0000 0000 0000 0000">
+                                </div>
 
-                            <div class="payment-form__group">
-                                <button class="payment-form__button">Pay Securely</button>
-                            </div>
-                        </form>
+                                <div class="payment-form__group payment-form__group--half left">
+                                    <div class="payment-form__label">Valid Till</div>
+                                    <input type="text" class="payment-form__field" placeholder="MM / YY">
+                                </div>
+
+                                <div class="payment-form__group payment-form__group--half payment-form__group--right">
+                                    <div class="payment-form__label">CVV</div>
+                                    <input type="text" class="payment-form__field" placeholder="000">
+                                </div>
+
+                                <div class="clear"></div>
+
+                                <div class="payment-form__group">
+                                    <button class="payment-form__button" disabled="">Pay Securely</button>
+                                </div>
+                            </form>
+
+                            <form class="payment-form payment-form--bank hidden">
+                                <div class="payment-form__group payment-form__group--with-borders">
+                                    
+                                    <div class="payment-form__label">Bank</div>
+                                    <select type="text" class="payment-form__select">
+                                        <option disabled selected>Where do you bank ?</option>
+                                        <option>Diamond Bank</option>
+                                        <option>Ecobank</option>
+                                        <option>First Bank</option>
+                                        <option>FCMB</option>
+                                        <option>GT Bank</option>
+                                        <option>Heritage Bank</option>
+                                        <option>Sterling Bank</option>
+                                        <option>UBA</option>
+                                        <option>Zenith</option>
+                                    </select>
+                                </div>
+
+                                <div class="payment-form__group payment-form__group--half left">
+                                    <div class="payment-form__label">Account Number (NUBAN)</div>
+                                    <input type="text" class="payment-form__field" placeholder="000 000 0000">
+                                </div>
+
+                                <div class="payment-form__group payment-form__group--half payment-form__group--right">
+                                    <div class="payment-form__label">OTP</div>
+                                    <input type="text" class="payment-form__field" placeholder="000 000">
+                                </div>
+
+                                <div class="clear"></div>
+
+                                <div class="payment-form__group">
+                                    <button class="payment-form__button" disabled>Pay Securely</button>
+                                </div>
+                            </form>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-
     </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

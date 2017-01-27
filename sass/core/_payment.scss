@@ -46,10 +46,14 @@
 		font-size: 1.2rem;
 		text-transform: uppercase;
 		display: inline-block;
-		padding: 10px 40px 8px;
+		padding: 10px 0 8px;
+		text-align: center;
+		
 		color: #003767;
 		cursor: pointer;
-		width: 49.4%;
+		float:left;
+		width: 50%;
+		transition: all .3s;
 
 		&:first-child{
 			border-top-left-radius: 4px;
@@ -73,14 +77,51 @@
 	}
 }
 
+.payment-form-wrap{
+	position: relative;
+	width: 100%;
+	min-height: 300px;
+	overflow: hidden;
+}
+
 
 .payment-form{
 	margin-top: 60px;
+	position: absolute;
+	top: 0;
+	pointer-events: auto;
+	opacity: 1;
+	transition: all .3s;
+	width: 100%;
+
+	&.hidden{
+		pointer-events: none;
+		opacity: 0;
+		transition: all .12s;
+	}
+
+	&--card{
+		left: 0;
+
+		&.hidden{ left: -10%; }
+	}
+
+	&--bank{
+		right: 0;
+		&.hidden{ right: -10%; }
+	}
+
 
 	&__group{
 		text-align: left;
 		position: relative;
 		margin-bottom: 15px;
+
+		&--with-borders{
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			padding: 35px 15px 10px;
+		}
 
 		&--half{
 			width: 48.5%;
@@ -90,6 +131,14 @@
 		&--right{
 			float: right;
 		}
+	}
+
+	&__select{
+		border: none;
+		width: 100%;
+		background-color: transparent;
+		outline: none;
+		margin-left: -6px;
 	}
 
 	&__label{
@@ -123,6 +172,10 @@
 		background-color: $green;
 
 		font-family: $regular-font;
+
+		&:disabled{
+			background-color: $stack-lighter-gray;
+		}
 	}
 }
 
