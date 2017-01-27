@@ -33,17 +33,17 @@
                             <form class="payment-form payment-form--card">
                                 <div class="payment-form__group">
                                     <div class="payment-form__label">Card Number</div>
-                                    <input type="text" class="payment-form__field" placeholder="0000 0000 0000 0000">
+                                    <input type="text" class="payment-form__field" placeholder="0000 0000 0000 0000" id="card_number" autofocus>
                                 </div>
 
                                 <div class="payment-form__group payment-form__group--half left">
                                     <div class="payment-form__label">Valid Till</div>
-                                    <input type="text" class="payment-form__field" placeholder="MM / YY">
+                                    <input type="text" class="payment-form__field" placeholder="MM/YY" id="valid_till">
                                 </div>
 
                                 <div class="payment-form__group payment-form__group--half payment-form__group--right">
                                     <div class="payment-form__label">CVV</div>
-                                    <input type="text" class="payment-form__field" placeholder="000">
+                                    <input type="text" class="payment-form__field" placeholder="000" id="cvv">
                                 </div>
 
                                 <div class="clear"></div>
@@ -73,12 +73,12 @@
 
                                 <div class="payment-form__group payment-form__group--half left">
                                     <div class="payment-form__label">Account Number (NUBAN)</div>
-                                    <input type="text" class="payment-form__field" placeholder="000 000 0000">
+                                    <input type="text" class="payment-form__field" placeholder="000 000 0000" id="account_number">
                                 </div>
 
                                 <div class="payment-form__group payment-form__group--half payment-form__group--right">
                                     <div class="payment-form__label">OTP</div>
-                                    <input type="text" class="payment-form__field" placeholder="000 000">
+                                    <input type="text" class="payment-form__field" placeholder="000 000" id="otp">
                                 </div>
 
                                 <div class="clear"></div>
@@ -96,7 +96,7 @@
     </div>
 
     <script src="js/jquery.js"></script>
-    <script src="js/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
