@@ -11,54 +11,40 @@
 
 <body>
     <div class="page">
-        
-        
         <div class="page__header">
             <img src="images/logo_icon.svg" class="page__logo">
             <h1 class="page__title">Paystack</h1>
         </div>
-        
-
         <div class="payment-card">
-
             <div class="payment-success hidden">
                 <div class="payment-success__icon">
                     <i class="ion-ios-checkmark-outline"></i>
                 </div>
-
                 <div class="payment-success__copy">
                     <p>Your payment was successful!</p>
                 </div>
                 <a href="#" class="link" id="restart">Return to merchant site <i class="ion-android-refresh"></i></a>
-               
             </div>
-
             <div class="payment-form-wrap">
                 <div class="switcher switcher--payment-card">
                     <div class="switcher__item switcher__item--card switcher__item--active">Card Payment</div>
                     <div class="switcher__item switcher__item--bank">Bank Payment</div>
                     <div class="clear"></div>
                 </div>
-        
-                
                 <form class="payment-form payment-form--card">
                     <div class="payment-form__group">
                         <div class="payment-form__label">Card Number</div>
                         <input type="text" class="payment-form__field" placeholder="0000 0000 0000 0000" id="card_number" autofocus>
                     </div>
-
                     <div class="payment-form__group payment-form__group--half left">
                         <div class="payment-form__label">Valid Till</div>
                         <input type="text" class="payment-form__field" placeholder="MM/YY" id="valid_till">
                     </div>
-
                     <div class="payment-form__group payment-form__group--half payment-form__group--right">
                         <div class="payment-form__label">CVV</div>
                         <input type="text" class="payment-form__field" placeholder="000" id="cvv">
                     </div>
-
                     <div class="clear"></div>
-
                     <div class="payment-form__group">
                         <button class="payment-form__button">
                             <span class="button-text">Pay Securely</span>
@@ -68,10 +54,8 @@
                         </button>
                     </div>
                 </form>
-
                 <form class="payment-form payment-form--bank hidden">
                     <div class="payment-form__group payment-form__group--with-borders">
-                        
                         <div class="payment-form__label">Bank</div>
                         <select type="text" class="payment-form__select">
                             <option disabled selected value="">Where do you bank ?</option>
@@ -86,14 +70,11 @@
                             <option>Zenith</option>
                         </select>
                     </div>
-
                     <div class="payment-form__group">
                         <div class="payment-form__label">Account Number (NUBAN)</div>
                         <input type="text" class="payment-form__field" placeholder="000 000 0000" id="account_number">
                     </div>
-
                     <div class="clear"></div>
-
                     <div class="payment-form__group">
                         <button class="payment-form__button">
                             <span class="button-text">Pay Securely</span>
@@ -103,20 +84,15 @@
                         </button>
                     </div>
                 </form>
-
                 <form class="payment-form payment-form--otp hidden--down">
-
                     <div class="payment-form__group payment-form__group--hint">
                         <p>A One-Time Password has been sent to <span class="registered-number">0812 096 4784</span>. Type it in the field below to complete your payment.</p>
-
                         <p>Didn't get the OTP?<a href="#" class="link">Resend<i class="ion-android-refresh"></i></a></p>
                     </div>
-
                     <div class="payment-form__group">
                         <div class="payment-form__label">One-Time Password</div>
                         <input type="text" class="payment-form__field" placeholder="000 000" id="otp">
                     </div>
-
                     <div class="payment-form__group">
                         <button class="payment-form__button">
                             <span class="button-text">Complete Payment</span>
@@ -126,13 +102,12 @@
                         </button>
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
-
     <script src="js/jquery.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

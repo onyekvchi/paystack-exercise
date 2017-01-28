@@ -1,13 +1,14 @@
-// Colors
+//##Colors
 $body-text-color: #576f7f;
 $green: #3bb75e;
 $blue: #003767;
 
-//Fonts
+//##Fonts
 $bold-font: "Boing", sans-serif;
 $regular-font: "Graphik", sans-serif;
 
 
+//##Base
 body, html{
 	height: 100%;
 	background-color: #f7f8f9;
@@ -33,6 +34,9 @@ body {
 	clear: both;
 }
 
+
+
+//##Page Styling
 .page{
 	min-height: 100%;
 	padding: 60px 0;
