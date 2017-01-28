@@ -4,14 +4,16 @@ $green: #3bb75e;
 $blue: #003767;
 
 //##Fonts
-$bold-font: "Boing", sans-serif;
-$regular-font: "Graphik", sans-serif;
-
+$bold-font: "Boing",
+sans-serif;
+$regular-font: "Graphik",
+sans-serif;
 
 //##Base
-body, html{
-	height: 100%;
-	background-color: #f7f8f9;
+body,
+html {
+    height: 100%;
+    background-color: #f7f8f9;
 }
 
 a {
@@ -30,325 +32,273 @@ body {
     font-size: 1.6rem;
 }
 
-.clear{
-	clear: both;
+.clear {
+    clear: both;
 }
-
-
 
 //##Page Styling
-.page{
-	min-height: 100%;
-	padding: 60px 0;
-	text-align: center;
-
-	&__header{
-		
-	}
-
-	&__title{
-		font-size: 1.8rem;
-		font-family: $bold-font;
-		margin-top: 15px;
-		color: $blue;
-	}
-
-	&__logo{
-		height: 30px;
-		width: 30px;
-		object-fit: contain;
-		object-position: center;
-	}
+.page {
+    min-height: 100%;
+    padding: 60px 0;
+    text-align: center;
+    &__header {}
+    &__title {
+        font-size: 1.8rem;
+        font-family: $bold-font;
+        margin-top: 15px;
+        color: $blue;
+    }
+    &__logo {
+        height: 30px;
+        width: 30px;
+        object-fit: contain;
+        object-position: center;
+    }
 }
 
-.payment-card{
-	padding: 60px;
-	background-color: white;
-	border-radius: 3px;
-	box-shadow: 0 3px 12px -2px rgba(0,0,0,0.08);
-	width: 500px;
-	margin: 30px auto;
-	position: relative;
-	overflow: hidden;
+.payment-card {
+    padding: 60px;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 3px 12px -2px rgba(0, 0, 0, 0.08);
+    width: 500px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
 }
 
-.switcher{
-	border: 1px solid $blue;
-	border-radius: 4px;
-	position: relative;
-	font-family: $bold-font;
-	text-align: center;
-	
-	&__item{
-		font-size: 1.1rem;
-		text-transform: uppercase;
-		display: inline-block;
-		padding: 10px 0 8px;
-		text-align: center;
-		letter-spacing: .5px;
-		
-		color: $blue;
-		cursor: pointer;
-		float:left;
-		width: 50%;
-		transition: all .3s;
-
-		&:first-child{
-			border-top-left-radius: 4px;
-			border-bottom-left-radius: 4px;
-		}
-
-		&:last-child{
-			border-top-right-radius: 4px;
-			border-bottom-right-radius: 4px;
-		}
-
-		&--active{
-			background-color: $blue;
-			color: white;
-		}
-	}
+.switcher {
+    border: 1px solid $blue;
+    border-radius: 4px;
+    position: relative;
+    font-family: $bold-font;
+    text-align: center;
+    &__item {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 10px 0 8px;
+        text-align: center;
+        letter-spacing: .5px;
+        color: $blue;
+        cursor: pointer;
+        float: left;
+        width: 50%;
+        transition: all .3s;
+        &:first-child {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+        &:last-child {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        &--active {
+            background-color: $blue;
+            color: white;
+        }
+    }
 }
 
-.payment-form-wrap{
-	position: relative;
-	width: 100%;
-	min-height: 330px;
-	overflow: hidden;
-
-	transition: all .3s;
-
-	&.hidden{
-		opacity: .2;
-		transform: scale(.95, .95);
-	}
+.payment-form-wrap {
+    position: relative;
+    width: 100%;
+    min-height: 330px;
+    overflow: hidden;
+    transition: all .3s;
+    &.hidden {
+        opacity: .2;
+        transform: scale(.95, .95);
+    }
 }
 
-
-.payment-form{
-	margin-top: 75px;
-	position: absolute;
-	top: 0;
-	pointer-events: auto;
-	opacity: 1;
-	transition: all .3s;
-	width: 100%;
-
-	&.hidden{
-		pointer-events: none;
-		opacity: 0;
-		transition: all .12s;
-	}
-
-	&.hidden--down{
-		pointer-events: none;
-		opacity: 0;
-		transition: all .12s;
-		top: 10%;
-	}
-
-	&.hidden--up{
-		pointer-events: none;
-		opacity: 0;
-		transition: all .12s;
-		bottom: 100%;
-	}
-
-	&--card{
-		left: 0;
-
-		&.hidden{ left: -10%; }
-	}
-
-	&--bank{
-		right: 0;
-		&.hidden{ right: -10%; }
-	}
-
-
-	&__group{
-		text-align: left;
-		position: relative;
-		margin-bottom: 15px;
-
-		&--with-borders{
-			border: 1px solid #ddd;
-			border-radius: 3px;
-			padding: 35px 15px 10px;
-		}
-
-		&--hint{
-			padding: 15px;
-			background-color: whitesmoke;
-			font-size: 1.3rem;
-			line-height: 1.4;
-			border-radius: 3px;
-		}
-
-		&--half{
-			width: 48.5%;
-			float: left;
-		}
-
-		&--right{
-			float: right;
-		}
-	}
-
-	&__select{
-		border: none;
-		width: 100%;
-		background-color: transparent;
-		outline: none;
-		margin-left: -6px;
-		font-size: 1.5rem;
-		font-family: $regular-font;
-	}
-
-	&__label{
-		position: absolute;
-		top: 12px;
-		left: 16px;
-		font-size: 1.1rem;
-		color: #999;
-	}
-
-	&__field{
-		padding: 35px 15px 10px;
-		width: 100%;
-		border: 1px solid #ddd;
-		border-radius: 3px;
-		outline: none;
-		font-family: $regular-font;
-		transition: all 0.3s;
-		font-size: 1.5rem;
-
-		&:focus{
-			border-color: #09a5db;
-		}
-	}
-
-	&__button{
-		width: 100%;
-		padding: 20px;
-		border-radius: 3px;
-		border: none;
-		color: white;
-		background-color: $green;
-		font-family: $regular-font;
-		font-size: 1.5rem;
-		position: relative;
-		transition: all .3s;
-		cursor: pointer;
-
-		&:disabled{
-			background-color: darken($green, 7);
-		}
-
-		.button-text{
-			opacity: 1;
-			transition: all .3s;
-		}
-		
-		.loading__icon{
-			position: absolute;
-			display: inline-block;
-			height: 30px; 
-			width: 30px; 
-			left: 175px;
-			top: 15px;
-			line-height: 32px;
-			text-align: center;
-			opacity: 0;
-			font-size: 2.4rem;
-			transition: all .3s;
-			-webkit-animation: spin 2s infinite linear;
-				    animation: spin 2s infinite linear;
-		}	
-	}
-
-	&__button--loading{
-		.button-text{
-			opacity: 0;
-		}
-
-		.loading__icon{
-			opacity: 1;
-		}
-	}
+.payment-form {
+    margin-top: 75px;
+    position: absolute;
+    top: 0;
+    pointer-events: auto;
+    opacity: 1;
+    transition: all .3s;
+    width: 100%;
+    &.hidden {
+        pointer-events: none;
+        opacity: 0;
+        transition: all .12s;
+    }
+    &.hidden--down {
+        pointer-events: none;
+        opacity: 0;
+        transition: all .12s;
+        top: 10%;
+    }
+    &.hidden--up {
+        pointer-events: none;
+        opacity: 0;
+        transition: all .12s;
+        bottom: 100%;
+    }
+    &--card {
+        left: 0;
+        &.hidden {
+            left: -10%;
+        }
+    }
+    &--bank {
+        right: 0;
+        &.hidden {
+            right: -10%;
+        }
+    }
+    &__group {
+        text-align: left;
+        position: relative;
+        margin-bottom: 15px;
+        &--with-borders {
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 35px 15px 10px;
+        }
+        &--hint {
+            padding: 15px;
+            background-color: whitesmoke;
+            font-size: 1.3rem;
+            line-height: 1.4;
+            border-radius: 3px;
+        }
+        &--half {
+            width: 48.5%;
+            float: left;
+        }
+        &--right {
+            float: right;
+        }
+    }
+    &__select {
+        border: none;
+        width: 100%;
+        background-color: transparent;
+        outline: none;
+        margin-left: -6px;
+        font-size: 1.5rem;
+        font-family: $regular-font;
+    }
+    &__label {
+        position: absolute;
+        top: 12px;
+        left: 16px;
+        font-size: 1.1rem;
+        color: #999;
+    }
+    &__field {
+        padding: 35px 15px 10px;
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        outline: none;
+        font-family: $regular-font;
+        transition: all 0.3s;
+        font-size: 1.5rem;
+        &:focus {
+            border-color: #09a5db;
+        }
+    }
+    &__button {
+        width: 100%;
+        padding: 20px;
+        border-radius: 3px;
+        border: none;
+        color: white;
+        background-color: $green;
+        font-family: $regular-font;
+        font-size: 1.5rem;
+        position: relative;
+        transition: all .3s;
+        cursor: pointer;
+        &:disabled {
+            background-color: darken($green, 7);
+        }
+        .button-text {
+            opacity: 1;
+            transition: all .3s;
+        }
+        .loading__icon {
+            position: absolute;
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            left: 175px;
+            top: 15px;
+            line-height: 32px;
+            text-align: center;
+            opacity: 0;
+            font-size: 2.4rem;
+            transition: all .3s;
+            -webkit-animation: spin 2s infinite linear;
+            animation: spin 2s infinite linear;
+        }
+    }
+    &__button--loading {
+        .button-text {
+            opacity: 0;
+        }
+        .loading__icon {
+            opacity: 1;
+        }
+    }
 }
 
-.link{
-	color: $green;
-	font-weight: bold;
-	font-family: $bold-font;
-	text-transform: uppercase;
-	font-size: 1.2rem;
-	display: inline-block;
-	
-	margin-top: 10px;
-	margin-left: 10px;
-	transition: all .3s;
-
-	i{
-		margin-left: 5px;
-	}
-
-	.payment-success &{
-		color: $body-text-color;
-		opacity: .5;
-
-		&:hover{
-			opacity: 1;
-		}
-	}
+.link {
+    color: $green;
+    font-weight: bold;
+    font-family: $bold-font;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    transition: all .3s;
+    i {
+        margin-left: 5px;
+    }
+    .payment-success & {
+        color: $body-text-color;
+        opacity: .5;
+        &:hover {
+            opacity: 1;
+        }
+    }
 }
 
-.registered-number{
-	font-weight: bold;
+.registered-number {
+    font-weight: bold;
 }
 
-
-.payment-success{
-	position: absolute;
-	left: 0;
-	top: 0;
-	background-color: white;
-
-	width: 100%;
-	height: 100%;
-	z-index: 3;
-	border-radius: 3px;
-	padding: 45px 60px;
-	text-align: center;
-	transition: all .3s;
-
-	&__icon{
-		font-size: 180px;
-		color: $green;
-	}
-
-	&__copy{
-		color: $blue;
-		margin-top: 0px;
-		margin-bottom: 45px;
-		font-size: 1.8rem;
-	}
-
-	&.hidden{
-		top: 30%;
-		opacity: 0;
-		pointer-events: none;
-		transition: all .12s;
-	}
+.payment-success {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    border-radius: 3px;
+    padding: 45px 60px;
+    text-align: center;
+    transition: all .3s;
+    &__icon {
+        font-size: 180px;
+        color: $green;
+    }
+    &__copy {
+        color: $blue;
+        margin-top: 0px;
+        margin-bottom: 45px;
+        font-size: 1.8rem;
+    }
+    &.hidden {
+        top: 30%;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .12s;
+    }
 }
-
-
-
-
-
-
-
-
-
-
