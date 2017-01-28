@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <title>Paystack</title>
-    <meta name="description" content="Accept payments online with Paystack">
+    <link rel="stylesheet" type="text/css" href="css/ionicons.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
@@ -49,7 +49,12 @@
                                 <div class="clear"></div>
 
                                 <div class="payment-form__group">
-                                    <button class="payment-form__button" disabled="">Pay Securely</button>
+                                    <button class="payment-form__button">
+                                        <span class="button-text">Pay Securely</span>
+                                        <span class="loading__icon">
+                                            <i class="ion-load-d"></i>
+                                        </span>
+                                    </button>
                                 </div>
                             </form>
 
@@ -58,7 +63,7 @@
                                     
                                     <div class="payment-form__label">Bank</div>
                                     <select type="text" class="payment-form__select">
-                                        <option disabled selected>Where do you bank ?</option>
+                                        <option disabled selected value="">Where do you bank ?</option>
                                         <option>Diamond Bank</option>
                                         <option>Ecobank</option>
                                         <option>First Bank</option>
@@ -71,20 +76,25 @@
                                     </select>
                                 </div>
 
-                                <div class="payment-form__group payment-form__group--half left">
+                                <div class="payment-form__group">
                                     <div class="payment-form__label">Account Number (NUBAN)</div>
                                     <input type="text" class="payment-form__field" placeholder="000 000 0000" id="account_number">
                                 </div>
 
-                                <div class="payment-form__group payment-form__group--half payment-form__group--right">
+                                <!-- <div class="payment-form__group payment-form__group--half payment-form__group--right">
                                     <div class="payment-form__label">OTP</div>
                                     <input type="text" class="payment-form__field" placeholder="000 000" id="otp">
-                                </div>
+                                </div> -->
 
                                 <div class="clear"></div>
 
                                 <div class="payment-form__group">
-                                    <button class="payment-form__button" disabled>Pay Securely</button>
+                                    <button class="payment-form__button">
+                                        <span class="button-text">Pay Securely</span>
+                                        <span class="loading__icon">
+                                            <i class="ion-load-d"></i>
+                                        </span>
+                                    </button>
                                 </div>
                             </form>
 

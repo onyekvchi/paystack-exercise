@@ -1,7 +1,10 @@
-.page{
-
+body, html{
+	height: 100%;
 	background-color: #f7f8f9;
-	height: 100vh;
+}
+
+.page{
+	min-height: 100%;
 	padding: 60px 0;
 	text-align: center;
 
@@ -12,6 +15,7 @@
 	&__title{
 		font-size: 1.8rem;
 		font-family: $bold-font;
+		margin-top: 15px;
 	}
 
 	&__logo{
@@ -22,11 +26,6 @@
 	}
 }
 
-.clear{
-	clear: both;
-}
-
-
 .payment-card{
 	padding: 60px;
 	background-color: white;
@@ -36,44 +35,40 @@
 }
 
 .switcher{
-	border: 1px solid #003767;
-	// display: inline-block;
-	border-radius: 5px;
+	border: 1px solid $blue;
+	border-radius: 4px;
 	position: relative;
+	font-family: $bold-font;
 	text-align: center;
 	
 	&__item{
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 		text-transform: uppercase;
 		display: inline-block;
 		padding: 10px 0 8px;
 		text-align: center;
+		letter-spacing: .5px;
 		
-		color: #003767;
+		color: $blue;
 		cursor: pointer;
 		float:left;
 		width: 50%;
 		transition: all .3s;
 
 		&:first-child{
-			border-top-left-radius: 3px;
-			border-bottom-left-radius: 3px;
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;
 		}
 
 		&:last-child{
-			border-top-right-radius: 3px;
-			border-bottom-right-radius: 3px;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
 		}
 
 		&--active{
-			background-color: #003767;
+			background-color: $blue;
 			color: white;
-			// border-color: #003767;
 		}
-	}
-
-	&__divider{
-		display: none;
 	}
 }
 
@@ -139,6 +134,8 @@
 		background-color: transparent;
 		outline: none;
 		margin-left: -6px;
+		font-size: 1.5rem;
+		font-family: $regular-font;
 	}
 
 	&__label{
@@ -157,6 +154,7 @@
 		outline: none;
 		font-family: $regular-font;
 		transition: all 0.3s;
+		font-size: 1.5rem;
 
 		&:focus{
 			border-color: #09a5db;
@@ -170,11 +168,38 @@
 		border: none;
 		color: white;
 		background-color: $green;
-
 		font-family: $regular-font;
+		font-size: 1.5rem;
+		position: relative;
+		transition: all .3s;
 
 		&:disabled{
-			background-color: $stack-lighter-gray;
+			background-color: darken($green, 7);
+		}
+
+		.button-text{
+			opacity: 1;
+			transition: all .3s;
+		}
+		
+		.loading__icon{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			font-size: 2.7rem;
+			transition: all .3s;
+		}	
+	}
+
+	&__button--loading{
+		.button-text{
+			opacity: 0;
+		}
+
+		.loading__icon{
+			opacity: 1;
 		}
 	}
 }
