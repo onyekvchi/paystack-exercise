@@ -75,6 +75,7 @@ $('.payment-form--card .payment-form__button').click(function(e){
 	switchIntoLoadingState(button);
 	setTimeout(function(){
 		switchOutOfLoadingState(button); 
+		showSuccess();
 	}, 1000);
 });
 
@@ -96,7 +97,12 @@ $('.payment-form--otp .payment-form__button').click(function(e){
 	switchIntoLoadingState(button);
 	setTimeout(function(){
 		switchOutOfLoadingState(button); 
+		showSuccess();
 	}, 1000);
+});
+
+$('#restart').click(function(){
+	hideSuccess();
 });
 
 function switchIntoLoadingState(button){
@@ -107,6 +113,17 @@ function switchIntoLoadingState(button){
 function switchOutOfLoadingState(button){
 	button.removeClass('payment-form__button--loading');
 	button.prop('disabled', false);
+}
+
+function showSuccess(){
+	$('.payment-success').removeClass('hidden');
+	$('.payment-form-wrap').addClass('hidden');
+	clearAllFields();
+}
+
+function hideSuccess(){
+	$('.payment-success').addClass('hidden');
+	$('.payment-form-wrap').removeClass('hidden');
 }
 
 

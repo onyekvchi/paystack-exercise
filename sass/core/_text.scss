@@ -5,9 +5,9 @@ a {
 
 html {
     font-size: 62.5%;
-    @include screen(small) {
-        font-size: 58%;
-    }
+    // @include screen(small) {
+    //     font-size: 58%;
+    // }
 }
 
 body {

@@ -21,13 +21,25 @@
 
         <div class="payment-card">
 
-            <div class="switcher switcher--payment-card">
-                <div class="switcher__item switcher__item--card switcher__item--active">Card Payment</div>
-                <div class="switcher__item switcher__item--bank">Bank Payment</div>
-                <div class="clear"></div>
+            <div class="payment-success hidden">
+                <div class="payment-success__icon">
+                    <i class="ion-ios-checkmark-outline"></i>
+                </div>
+
+                <div class="payment-success__copy">
+                    <p>Your payment was successful!</p>
+                </div>
+                <a href="#" class="link" id="restart">Return to merchant site <i class="ion-android-refresh"></i></a>
+               
             </div>
-            
+
             <div class="payment-form-wrap">
+                <div class="switcher switcher--payment-card">
+                    <div class="switcher__item switcher__item--card switcher__item--active">Card Payment</div>
+                    <div class="switcher__item switcher__item--bank">Bank Payment</div>
+                    <div class="clear"></div>
+                </div>
+        
                 
                 <form class="payment-form payment-form--card">
                     <div class="payment-form__group">
@@ -97,7 +109,7 @@
                     <div class="payment-form__group payment-form__group--hint">
                         <p>A One-Time Password has been sent to <span class="registered-number">0812 096 4784</span>. Type it in the field below to complete your payment.</p>
 
-                        <p>Didn't get the OTP?<a href="#" class="resend-otp">Resend<i class="ion-android-refresh"></i></a></p>
+                        <p>Didn't get the OTP?<a href="#" class="link">Resend<i class="ion-android-refresh"></i></a></p>
                     </div>
 
                     <div class="payment-form__group">
