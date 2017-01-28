@@ -65,32 +65,7 @@ gulp.task('css', function() {
         .pipe(connect.reload());
 });
 
-
-
-
-
-// /* *************
-//     HTML
-// ************* */
-
-// var minifyHTML = require('gulp-minify-html');
-
 var htmlFiles = ['*.html'];
-
-// gulp.task('html', function() {
-//     gulp.src('src/index.html')
-//         .pipe(minifyHTML({ empty: true }))
-//         .pipe(gulp.dest('public'));
-//     gulp.src('src/views/*.html')
-//         .pipe(minifyHTML({ empty: true }))
-//         .pipe(gulp.dest('public/views'));
-//     gulp.src('src/views/inc/*.html')
-//         .pipe(minifyHTML({ empty: true }))
-//         .pipe(gulp.dest('public/views/inc'));
-//     gulp.src('src/views/directives/*.html')
-//         .pipe(minifyHTML({ empty: true }))
-//         .pipe(gulp.dest('public/views/directives'));
-// });
 
 gulp.task('html', function() {
     gulp.src('*.html')
