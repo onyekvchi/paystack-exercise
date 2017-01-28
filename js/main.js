@@ -30,6 +30,18 @@ function showCardForm(){
 function clearAllFields(){
 	$('.payment-form__field').val('');
 	$('.payment-form__select').val('');
+
+	hideOTPForm();
+}
+
+function showOTPForm(){
+	$('.payment-form--bank').addClass('hidden--up');
+	$('.payment-form--otp').removeClass('hidden--down');
+}
+
+function hideOTPForm(){
+	$('.payment-form--bank').removeClass('hidden--up');
+	$('.payment-form--otp').addClass('hidden--down');
 }
 
 //input masks code
@@ -50,28 +62,41 @@ $(document).ready(function(){
 
   $('#cvv').mask('000');
 
-  $('#account_number')
-    	.mask('000 000 0000', { 
-  		onComplete: function(){
-  			$('#otp').focus();
-  		}
-  	});
+  $('#account_number').mask('000 000 0000');
 
   $('#otp').mask('000 000');
 });
 
 
 //button click handlers
-$('.payment-form--card .payment-form__button').click(function(){
+$('.payment-form--card .payment-form__button').click(function(e){
+	e.preventDefault();
 	var button = $(this);
 	switchIntoLoadingState(button);
-	switchOutOfLoadingState(button);
+	setTimeout(function(){
+		switchOutOfLoadingState(button); 
+	}, 1000);
 });
 
-$('.payment-form--bank .payment-form__button').click(function(){
+$('.payment-form--bank .payment-form__button').click(function(e){
+	e.preventDefault();
 	var button = $(this);
 	switchIntoLoadingState(button);
-	switchOutOfLoadingState(button);
+	setTimeout(function(){
+		switchOutOfLoadingState(button); 
+		showOTPForm();
+	}, 1000);
+
+	
+});
+
+$('.payment-form--otp .payment-form__button').click(function(e){
+	e.preventDefault();
+	var button = $(this);
+	switchIntoLoadingState(button);
+	setTimeout(function(){
+		switchOutOfLoadingState(button); 
+	}, 1000);
 });
 
 function switchIntoLoadingState(button){
@@ -80,10 +105,8 @@ function switchIntoLoadingState(button){
 }
 
 function switchOutOfLoadingState(button){
-	setTimeout(function(){
-		button.removeClass('payment-form__button--loading');
-		button.prop('disabled', false);
-	}, 3000);	
+	button.removeClass('payment-form__button--loading');
+	button.prop('disabled', false);
 }
 
 
